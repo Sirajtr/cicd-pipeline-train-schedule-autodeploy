@@ -15,7 +15,6 @@ pipeline {
         stage('Build Docker Image') {
                    steps {
                 script {
-                    docker.image(DOCKER_IMAGE_NAME).inside("""--entrypoint=''""")
                     app = docker.build(DOCKER_IMAGE_NAME)
                     app.inside {
                         sh 'echo Hello, World!'
