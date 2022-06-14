@@ -5,12 +5,6 @@ pipeline {
         DOCKER_IMAGE_NAME = "sirajtr/nodeapp"
     }
     stages {
-        
-        stage('Checkout Source') {
-         steps (
-            git 'https://github.com/Sirajtr/cicd-pipeline-train-schedule-autodeploy.git'
-             }
-             }
         stage('Build') {
             steps {
                 echo 'Running build automation'
